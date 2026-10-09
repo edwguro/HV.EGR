@@ -1,0 +1,11 @@
+.git
+.next
+.turbo
+coverage
+dist
+node_modules
+work
+outputs
+.env
+*.log
+*.tsbuildinfo

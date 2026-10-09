@@ -1,0 +1,50 @@
+{
+  "name": "professional-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "db:generate": "prisma generate",
+    "db:ganaderia-media-sync": "tsx prisma/sync-ganaderia-media.ts",
+    "db:fortaleza-media-sync": "tsx prisma/sync-fortaleza-media.ts",
+    "db:edufree-media-sync": "tsx prisma/sync-edufree-media.ts",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "prisma db seed",
+    "db:resume-sync": "tsx prisma/sync-resume.ts",
+    "db:taxi-ji-sync": "tsx prisma/sync-taxi-ji.ts",
+    "db:territorio-sync": "tsx prisma/sync-territorio-360.ts",
+    "db:validate": "prisma validate",
+    "dev": "turbo run dev --parallel",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "turbo run lint",
+    "prepare": "husky",
+    "test": "turbo run test",
+    "test:e2e": "playwright test",
+    "test:e2e:report": "playwright show-report",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "dotenv": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "latest",
+    "prisma": "latest",
+    "tsx": "latest",
+    "turbo": "latest",
+    "typescript": "^5.9.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,mdx,yml,yaml,css}": "prettier --write"
+  },
+  "packageManager": "pnpm@11.18.0+sha512.33d83c77da82f49fba836925c6f1b841181ec3132b670639bd012f7075f5c7cf634c5f870147c19aae7478fac01df09d8892e880454896edd23ee9b33757563c"
+}

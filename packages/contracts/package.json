@@ -1,0 +1,18 @@
+{
+  "name": "@portfolio/contracts",
+  "version": "0.0.0",
+  "private": true,
+  "exports": "./src/index.ts",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@portfolio/eslint-config": "workspace:*",
+    "@portfolio/typescript-config": "workspace:*",
+    "eslint": "^9.0.0",
+    "typescript": "^5.9.0"
+  }
+}

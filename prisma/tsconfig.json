@@ -1,0 +1,15 @@
+{
+  "extends": "../packages/typescript-config/base.json",
+  "compilerOptions": {
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noEmit": true,
+    "paths": {
+      "@prisma/adapter-pg": ["../apps/api/node_modules/@prisma/adapter-pg"]
+    },
+    "typeRoots": ["../apps/api/node_modules/@types"],
+    "types": ["node"]
+  },
+  "include": ["seed.ts", "data/**/*.ts"]
+}

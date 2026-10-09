@@ -1,0 +1,248 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --user-font-scale: 1;
+  --background: #f6f9fc;
+  --foreground: #142033;
+  --muted: #eaf1f6;
+  --muted-foreground: #58677a;
+  --border: #ccd9e5;
+  --accent: #087c7c;
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #141c24;
+  --foreground: #edf2f6;
+  --muted: #1c2732;
+  --muted-foreground: #a9b6c3;
+  --border: #344553;
+  --accent: #72cfc5;
+  --surface: #1a2530;
+  --surface-elevated: #22303c;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-accent: var(--accent);
+  --color-background: var(--background);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  font-size: calc(16px * var(--user-font-scale));
+  scroll-behavior: smooth;
+}
+
+section[id],
+[id='perfil'],
+[id='trayectoria'],
+[id='educacion'] {
+  scroll-margin-top: 5rem;
+}
+
+html:not([data-language='en']) [lang='en'],
+html[data-language='en'] [lang='es'] {
+  display: none;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  background-image:
+    radial-gradient(circle at 8% 8%, rgb(14 116 144 / 0.07), transparent 26rem),
+    radial-gradient(
+      circle at 92% 38%,
+      rgb(245 158 11 / 0.035),
+      transparent 30rem
+    ),
+    linear-gradient(180deg, rgb(255 255 255 / 0.32), transparent 32rem);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.dark body {
+  background-image:
+    radial-gradient(
+      circle at 10% 6%,
+      rgb(45 212 191 / 0.055),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 92% 38%,
+      rgb(59 130 246 / 0.045),
+      transparent 34rem
+    ),
+    linear-gradient(180deg, rgb(255 255 255 / 0.018), transparent 38rem);
+}
+
+a,
+button,
+[role='button'] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (pointer: fine) {
+  a,
+  button {
+    cursor: pointer;
+  }
+
+  a,
+  button {
+    transition-property:
+      color, background-color, border-color, box-shadow, transform;
+    transition-duration: 180ms;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -5rem;
+  z-index: 100;
+  border-radius: 999px;
+  background: var(--foreground);
+  color: var(--background);
+  padding: 0.75rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.resume-title {
+  border-bottom: 2px solid rgb(30 64 175);
+  padding-bottom: 0.375rem;
+  color: rgb(15 23 42);
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resume-title-light {
+  border-bottom-color: rgb(103 232 249);
+  color: white;
+}
+
+.resume-contact {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resume-contact svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.resume-contact-icon {
+  display: inline-flex;
+  width: 1.45rem;
+  height: 1.45rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  background: white;
+}
+
+.resume-contact-email .resume-contact-icon,
+.resume-contact-location .resume-contact-icon {
+  color: #ea4335;
+}
+
+.resume-contact-whatsapp .resume-contact-icon {
+  color: #25d366;
+}
+
+.resume-contact-github .resume-contact-icon {
+  color: #181717;
+}
+
+.resume-contact-linkedin .resume-contact-icon {
+  color: #0a66c2;
+}
+
+.resume-contact span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    background: white !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .resume-screen {
+    min-height: auto;
+  }
+
+  .site-header,
+  .skip-link,
+  .resume-actions {
+    display: none !important;
+  }
+
+  .resume-sheet {
+    width: 210mm;
+    min-height: 297mm;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

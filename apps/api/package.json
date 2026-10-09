@@ -1,0 +1,44 @@
+{
+  "name": "@portfolio/api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nest build",
+    "dev": "nest start --watch",
+    "lint": "eslint .",
+    "start": "node dist/main.js",
+    "test": "jest --runInBand",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@nestjs/common": "latest",
+    "@nestjs/config": "latest",
+    "@nestjs/core": "latest",
+    "@nestjs/platform-express": "latest",
+    "@nestjs/swagger": "latest",
+    "@nestjs/throttler": "latest",
+    "@prisma/adapter-pg": "latest",
+    "@prisma/client": "latest",
+    "@portfolio/contracts": "workspace:*",
+    "class-transformer": "latest",
+    "class-validator": "latest",
+    "helmet": "latest",
+    "openai": "7.2.0",
+    "pg": "latest",
+    "reflect-metadata": "latest",
+    "rxjs": "latest"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "latest",
+    "@nestjs/testing": "latest",
+    "@portfolio/eslint-config": "workspace:*",
+    "@portfolio/typescript-config": "workspace:*",
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "@types/pg": "latest",
+    "eslint": "^9.0.0",
+    "jest": "latest",
+    "ts-jest": "latest",
+    "typescript": "^5.9.0"
+  }
+}

@@ -1,0 +1,148 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../apps/api/src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum SkillCategory {
+  FRONTEND
+  BACKEND
+  DATABASE
+  DEVOPS
+  API
+  NETWORKING
+  AI
+}
+
+enum ContactMessageStatus {
+  NEW
+  READ
+  REPLIED
+  ARCHIVED
+  SPAM
+}
+
+model Profile {
+  id                  String       @id @default(uuid()) @db.Uuid
+  slug                String       @unique @db.VarChar(100)
+  fullName            String       @db.VarChar(160)
+  headline            String       @db.VarChar(220)
+  professionalSummary String       @db.Text
+  location            String?      @db.VarChar(160)
+  email               String?      @db.VarChar(320)
+  githubUrl           String?      @db.VarChar(500)
+  linkedinUrl         String?      @db.VarChar(500)
+  cvUrl               String?      @db.VarChar(500)
+  createdAt           DateTime     @default(now()) @db.Timestamptz(3)
+  updatedAt           DateTime     @updatedAt @db.Timestamptz(3)
+  experiences         Experience[]
+  education           Education[]
+  skills              Skill[]
+
+  @@index([updatedAt])
+}
+
+model Experience {
+  id             String    @id @default(uuid()) @db.Uuid
+  profileId      String    @db.Uuid
+  company        String    @db.VarChar(180)
+  role           String    @db.VarChar(180)
+  description    String    @db.Text
+  location       String?   @db.VarChar(160)
+  startDate      DateTime  @db.Date
+  endDate        DateTime? @db.Date
+  isCurrent      Boolean   @default(false)
+  certificateUrl String?   @db.VarChar(500)
+  sortOrder      Int       @default(0)
+  createdAt      DateTime  @default(now()) @db.Timestamptz(3)
+  updatedAt      DateTime  @updatedAt @db.Timestamptz(3)
+  profile        Profile   @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId, sortOrder])
+  @@index([startDate])
+}
+
+model Education {
+  id             String    @id @default(uuid()) @db.Uuid
+  profileId      String    @db.Uuid
+  institution    String    @db.VarChar(200)
+  degree         String    @db.VarChar(200)
+  field          String?   @db.VarChar(200)
+  description    String?   @db.Text
+  startDate      DateTime? @db.Date
+  endDate        DateTime? @db.Date
+  certificateUrl String?   @db.VarChar(500)
+  sortOrder      Int       @default(0)
+  createdAt      DateTime  @default(now()) @db.Timestamptz(3)
+  updatedAt      DateTime  @updatedAt @db.Timestamptz(3)
+  profile        Profile   @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId, sortOrder])
+}
+
+model Skill {
+  id        String        @id @default(uuid()) @db.Uuid
+  profileId String        @db.Uuid
+  name      String        @db.VarChar(100)
+  category  SkillCategory
+  sortOrder Int           @default(0)
+  createdAt DateTime      @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime      @updatedAt @db.Timestamptz(3)
+  profile   Profile       @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@unique([profileId, category, name])
+  @@index([category, sortOrder])
+}
+
+model Project {
+  id            String              @id @default(uuid()) @db.Uuid
+  slug          String              @unique @db.VarChar(120)
+  title         String              @db.VarChar(180)
+  summary       String              @db.VarChar(320)
+  description   String              @db.Text
+  category      String              @db.VarChar(100)
+  demoUrl       String?             @db.VarChar(500)
+  repositoryUrl String?             @db.VarChar(500)
+  screenshots   String[]
+  featured      Boolean             @default(false)
+  published     Boolean             @default(false)
+  sortOrder     Int                 @default(0)
+  createdAt     DateTime            @default(now()) @db.Timestamptz(3)
+  updatedAt     DateTime            @updatedAt @db.Timestamptz(3)
+  technologies  ProjectTechnology[]
+
+  @@index([published, featured, sortOrder])
+  @@index([category])
+}
+
+model ProjectTechnology {
+  id        String   @id @default(uuid()) @db.Uuid
+  projectId String   @db.Uuid
+  name      String   @db.VarChar(100)
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @db.Timestamptz(3)
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@unique([projectId, name])
+  @@index([name])
+}
+
+model ContactMessage {
+  id        String               @id @default(uuid()) @db.Uuid
+  name      String               @db.VarChar(160)
+  email     String               @db.VarChar(320)
+  company   String?              @db.VarChar(180)
+  subject   String               @db.VarChar(200)
+  message   String               @db.Text
+  status    ContactMessageStatus @default(NEW)
+  createdAt DateTime             @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime             @updatedAt @db.Timestamptz(3)
+
+  @@index([status, createdAt])
+  @@index([createdAt])
+}

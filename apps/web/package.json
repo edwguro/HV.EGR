@@ -1,0 +1,39 @@
+{
+  "name": "@portfolioEGR/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev --port 3000",
+    "lint": "eslint .",
+    "start": "next start --port 3000",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@portfolio/contracts": "workspace:*",
+    "@portfolio/ui": "workspace:*",
+    "@radix-ui/react-slot": "latest",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "lucide-react": "latest",
+    "motion": "latest",
+    "next": "latest",
+    "next-themes": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwind-merge": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@portfolio/eslint-config": "workspace:*",
+    "@portfolio/typescript-config": "workspace:*",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "^9.0.0",
+    "tailwindcss": "latest",
+    "typescript": "^5.9.0"
+  }
+}

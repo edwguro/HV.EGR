@@ -108,19 +108,18 @@ export const resumeData = {
         'Ingeniero de Sistemas · Tarjeta profesional No. 091122-0807632 CNDC COPNIA.',
       startDate: '2019-04-01',
       endDate: '2024-10-01',
-      certificateUrl:
-        'https://drive.google.com/file/d/1xXFR3HKeXs6OKoLAVqggU7ROneqp07Y3/view?usp=drivesdk',
+      certificateUrl: '/documents/diploma-ingeniero-sistemas-cun.pdf',
     },
     {
       institution: 'CUN',
-      degree: 'Diplomado en JavaScript y aplicaciones web',
-      field: 'Facultad de Ingeniería',
+      degree:
+        'Diplomado en Desarrollo de Aplicaciones de Software Orientadas a Objetos con Java',
+      field: 'Desarrollo de software',
       description:
-        'Diplomado en diseño y desarrollo de aplicaciones web con JavaScript, ingeniería de software, análisis y modelado de datos, Express, React y librerías del ecosistema JavaScript.',
+        'Formación continuada de 100 horas en desarrollo de aplicaciones de software orientadas a objetos con Java.',
       startDate: '2024-04-01',
-      endDate: '2024-10-01',
-      certificateUrl:
-        'https://drive.google.com/file/d/1xXFR3HKeXs6OKoLAVqggU7ROneqp07Y3/view?usp=drivesdk',
+      endDate: '2024-11-12',
+      certificateUrl: '/documents/diplomado-java-poo-cun.pdf',
     },
     {
       institution: 'EDUTIN ACADEMY',
@@ -142,7 +141,7 @@ export const resumeData = {
       startDate: '2019-04-01',
       endDate: '2023-06-01',
       certificateUrl:
-        'https://drive.google.com/file/d/1xXFR3HKeXs6OKoLAVqggU7ROneqp07Y3/view?usp=drivesdk',
+        '/documents/acta-diploma-tecnologo-software-redes-cun.pdf',
     },
     {
       institution: 'Universidad de Caldas',

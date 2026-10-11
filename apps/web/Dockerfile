@@ -19,7 +19,7 @@ ARG NEXT_PUBLIC_SITE_URL
 ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 COPY . .
-RUN pnpm --filter @portfolio/web build
+RUN pnpm --filter @portfolioEGR/web build
 
 FROM node:24-alpine AS runner
 ENV NODE_ENV=production

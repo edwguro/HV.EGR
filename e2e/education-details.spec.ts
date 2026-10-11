@@ -10,9 +10,7 @@ test('muestra los estudios en tarjetas compactas con detalle', async ({
     'Formacion academica en cinta horizontal',
   );
   await expect(ribbon).toBeVisible();
-  await expect
-    .poll(() => ribbon.evaluate((element) => element.scrollLeft))
-    .toBeGreaterThan(0);
+  await expect(education.getByRole('article')).toHaveCount(6);
 
   const detailButtons = education.getByRole('button', { name: 'Ver detalle' });
   await expect(detailButtons.first()).toBeVisible();
@@ -27,4 +25,23 @@ test('muestra los estudios en tarjetas compactas con detalle', async ({
 
   await dialog.getByRole('button', { name: 'Cerrar detalle' }).click();
   await expect(dialog).toBeHidden();
+
+  const edutin = education
+    .getByRole('article')
+    .filter({ hasText: 'EDUTIN ACADEMY' });
+  await expect(edutin.getByText('Pendiente de certificado')).toBeVisible();
+
+  const technicalProgram = education
+    .getByRole('article')
+    .filter({ hasText: 'Técnico Profesional en Soporte e Informática' });
+  await expect(
+    technicalProgram.getByText('Pendiente de certificado'),
+  ).toBeVisible();
+
+  const caldas = education
+    .getByRole('article')
+    .filter({ hasText: 'Universidad de Caldas' });
+  await expect(
+    caldas.getByRole('link', { name: 'Ver certificado' }),
+  ).toHaveAttribute('href', '/documents/acta-ucaldas-desarrollo-software.pdf');
 });

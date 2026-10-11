@@ -1,7 +1,7 @@
 'use client';
 
 import type { ProjectSummaryResponse } from '@portfolio/contracts';
-import { CodeXml, Eye } from 'lucide-react';
+import { CodeXml, ExternalLink, Eye } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo, useState, useSyncExternalStore } from 'react';
@@ -104,10 +104,13 @@ export function ProjectsSection({
                         'edufree-api',
                         'fortaleza-app',
                         'ganaderia-app',
+                        'pautas-ji',
                         'taxi-ji',
                         'territorio-360',
                       ].includes(project.slug)
-                        ? 'aspect-[3/2]'
+                        ? project.slug === 'pautas-ji'
+                          ? 'aspect-video'
+                          : 'aspect-[3/2]'
                         : 'h-20'
                     }`}
                   >
@@ -118,6 +121,7 @@ export function ProjectsSection({
                           [
                             'fortaleza-app',
                             'edufree-api',
+                            'pautas-ji',
                             'taxi-ji',
                             'ganaderia-app',
                             'territorio-360',
@@ -145,6 +149,11 @@ export function ProjectsSection({
                     <span className="absolute top-2 left-2 rounded border border-white/20 bg-slate-950/70 px-1.5 py-0.5 text-[0.58rem] font-bold text-white backdrop-blur-sm">
                       {project.category}
                     </span>
+                    {project.demoUrl ? (
+                      <span className="absolute top-2 right-2 rounded border border-emerald-300/35 bg-emerald-950/80 px-1.5 py-0.5 text-[0.58rem] font-bold text-emerald-100 backdrop-blur-sm">
+                        <BilingualText en="In production" es="En producción" />
+                      </span>
+                    ) : null}
                   </div>
                   <div className="flex flex-1 flex-col p-2.5">
                     <div>
@@ -186,10 +195,21 @@ export function ProjectsSection({
                         </a>
                       ) : null}
                       {project.demoUrl ? (
-                        <ProjectLivePreview
-                          title={project.title}
-                          url={project.demoUrl}
-                        />
+                        <>
+                          <ProjectLivePreview
+                            title={project.title}
+                            url={project.demoUrl}
+                          />
+                          <a
+                            className="inline-flex items-center gap-1 rounded-md bg-emerald-700 px-2 py-1.5 text-[0.66rem] font-bold text-white transition hover:bg-emerald-800 dark:bg-emerald-300 dark:text-slate-950 dark:hover:bg-emerald-200"
+                            href={project.demoUrl}
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            <BilingualText en="Open website" es="Ver web" />
+                            <ExternalLink aria-hidden size={13} />
+                          </a>
+                        </>
                       ) : null}
                     </div>
                   </div>

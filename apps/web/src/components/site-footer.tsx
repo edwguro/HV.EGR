@@ -1,4 +1,4 @@
-import { ArrowUp, Mail, MessageCircle } from 'lucide-react';
+import { ArrowUp, BookOpen, Mail, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import { siteContent } from '@/content/site';
 import { BilingualText } from './bilingual-text';
@@ -112,7 +112,7 @@ export function SiteFooter() {
           aria-hidden
           className="absolute top-[-1px] left-1/2 h-px w-40 -translate-x-1/2 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
         />
-        <div className="mx-auto flex w-full max-w-[96rem] items-center justify-center gap-4 px-3 py-2.5 text-[0.68rem] text-slate-500 lg:px-5">
+        <div className="mx-auto flex w-full max-w-[96rem] flex-wrap items-center justify-center gap-x-4 gap-y-2 px-3 py-2.5 text-[0.68rem] text-slate-500 lg:px-5">
           <p>
             © {new Date().getFullYear()} {siteContent.name} ·{' '}
             <BilingualText
@@ -120,6 +120,13 @@ export function SiteFooter() {
               es="Creado con TypeScript"
             />
           </p>
+          <Link
+            className="inline-flex items-center gap-1 font-semibold text-cyan-300 hover:text-cyan-200"
+            href="/documentacion"
+          >
+            <BookOpen aria-hidden size={13} />
+            Documentación
+          </Link>
           <a
             className="inline-flex size-7 shrink-0 items-center justify-center rounded-md border border-cyan-400/45 text-cyan-300 transition hover:-translate-y-0.5 hover:bg-cyan-400 hover:text-slate-950"
             href="#inicio"

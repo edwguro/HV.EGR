@@ -45,7 +45,7 @@ export function HeroSection({ profile }: { profile: ProfileResponse | null }) {
   const summary = profile?.professionalSummary;
   return (
     <section
-      className="relative overflow-hidden py-12 sm:py-14 lg:py-16"
+      className="relative overflow-hidden pt-5 pb-10 sm:pt-6 sm:pb-12 lg:pt-7 lg:pb-14"
       id="inicio"
     >
       <div
@@ -59,7 +59,7 @@ export function HeroSection({ profile }: { profile: ProfileResponse | null }) {
         initial={reduceMotion ? false : { opacity: 0, y: 18 }}
         transition={{ duration: 0.55, ease: 'easeOut' }}
       >
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-14 xl:grid-cols-[minmax(0,1fr)_22rem] xl:gap-16">
+        <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_22rem] xl:gap-14">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-600/25 bg-cyan-500/10 px-3 py-1.5 font-mono text-xs font-bold tracking-[0.16em] text-cyan-700 uppercase dark:text-cyan-300">
               <span aria-hidden className="size-2 rounded-full bg-cyan-500" />
@@ -70,10 +70,10 @@ export function HeroSection({ profile }: { profile: ProfileResponse | null }) {
             </div>
             <h1 className="text-foreground max-w-4xl text-3xl leading-[1.08] font-bold tracking-[-0.04em] text-balance sm:text-4xl lg:text-5xl">
               <span lang="es">
-                Desarrollo de aplicaciones web y APIs con fundamentos sólidos.
+                Desarrollo de software para operaciones web de producción.
               </span>
               <span lang="en">
-                I build web applications and APIs on solid foundations.
+                I build production-ready software for web operations.
               </span>
             </h1>
             <div className="relative mt-5 max-w-4xl border-l-2 border-cyan-600/45 py-1 pl-4 sm:pl-5 dark:border-cyan-400/35">

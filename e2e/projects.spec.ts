@@ -1,5 +1,24 @@
 import { expect, test } from '@playwright/test';
 
+test('prioriza los proyectos en producción y enlaza PAUTAS JI', async ({
+  page,
+}) => {
+  await page.goto('/#proyectos', { waitUntil: 'domcontentloaded' });
+
+  const projects = page.locator('#proyectos').getByRole('article');
+  await expect(projects.nth(0)).toContainText('PAUTAS JI');
+  await expect(projects.nth(1)).toContainText(
+    'Gestión administrativa EDS Combustibles',
+  );
+
+  const pautas = projects.filter({ hasText: 'PAUTAS JI' });
+  await expect(pautas).toContainText('En producción');
+  await expect(pautas.getByRole('link', { name: 'Ver web' })).toHaveAttribute(
+    'href',
+    'https://pautas-ji-web-production.up.railway.app/',
+  );
+});
+
 test('filtra proyectos y abre el detalle de La Fortaleza', async ({ page }) => {
   await page.goto('/#proyectos', { waitUntil: 'domcontentloaded' });
   await page

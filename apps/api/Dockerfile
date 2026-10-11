@@ -18,7 +18,6 @@ RUN pnpm db:generate && pnpm --filter @portfolio/api build
 
 FROM node:24-alpine AS runner
 ENV NODE_ENV=production
-ENV API_PORT=4000
 WORKDIR /app
 RUN addgroup --system --gid 1001 nestjs && adduser --system --uid 1001 nestjs
 COPY --from=dependencies --chown=nestjs:nestjs /app/node_modules ./node_modules

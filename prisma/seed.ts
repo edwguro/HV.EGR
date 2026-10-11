@@ -131,6 +131,28 @@ async function main(): Promise<void> {
 
   const featuredProjects = [
     {
+      slug: 'pautas-ji',
+      title: 'PAUTAS JI',
+      summary:
+        'Sistema web en producción para administrar clientes, planes de pauta, visitas, entrevistas, contenidos audiovisuales, recaudo e informes mensuales.',
+      description:
+        'Plataforma web y PWA para la gestión comercial y audiovisual de James Informa. Centraliza clientes, catálogo de planes, pautas contratadas, visitas, entrevistas, videos, pagos, cartera e informes mensuales. Su panel ejecutivo consolida indicadores financieros y operativos para consultar ventas, recaudo, saldos, actividad comercial y cumplimiento desde una sola interfaz.',
+      category: 'Gestión comercial y audiovisual',
+      technologies: [
+        'JavaScript',
+        'Node.js 22',
+        'Express 5',
+        'PostgreSQL',
+        'Chart.js',
+        'PWA',
+        'Railway',
+      ],
+      repositoryUrl: null,
+      demoUrl: 'https://pautas-ji-web-production.up.railway.app/',
+      screenshots: ['/images/projects/pautas-ji-dashboard.png'],
+      sortOrder: 1,
+    },
+    {
       slug: 'taxi-ji',
       title: 'Taxi Ji',
       summary:
@@ -141,7 +163,7 @@ async function main(): Promise<void> {
       technologies: ['React', 'NestJS', 'PostgreSQL', 'Prisma'],
       repositoryUrl: 'https://github.com/edwguro/taxi-ji',
       screenshots: ['/images/projects/taxi-ji-showcase-v2.png'],
-      sortOrder: 1,
+      sortOrder: 3,
     },
     {
       slug: 'territorio-360',
@@ -161,7 +183,7 @@ async function main(): Promise<void> {
       ],
       repositoryUrl: null,
       screenshots: ['/images/projects/territorio-360-showcase.png'],
-      sortOrder: 2,
+      sortOrder: 4,
     },
     {
       slug: 'fortaleza-app',
@@ -187,7 +209,7 @@ async function main(): Promise<void> {
         '/images/projects/eds-la-fortaleza-showcase.png',
         '/images/projects/eds-la-fortaleza-dashboard.png',
       ],
-      sortOrder: 3,
+      sortOrder: 2,
     },
     {
       slug: 'edufree-api',
@@ -206,7 +228,7 @@ async function main(): Promise<void> {
       ],
       repositoryUrl: 'https://github.com/edwguro/BackendEdufree-G28-E2',
       screenshots: ['/images/projects/edufree-showcase-v1.png'],
-      sortOrder: 4,
+      sortOrder: 5,
     },
     {
       slug: 'ganaderia-app',
@@ -219,7 +241,7 @@ async function main(): Promise<void> {
       technologies: ['C#', '.NET Core', 'HTML', 'CSS'],
       repositoryUrl: 'https://github.com/edwguro/EquipoColaborativo4',
       screenshots: ['/images/projects/ganaderia-app-showcase-v1.png'],
-      sortOrder: 5,
+      sortOrder: 6,
     },
   ] as const;
 

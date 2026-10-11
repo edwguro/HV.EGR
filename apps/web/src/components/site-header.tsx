@@ -1,6 +1,6 @@
 'use client';
 
-import { FileText, Menu, X } from 'lucide-react';
+import { BookOpen, FileText, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import type { MouseEvent } from 'react';
 import { useEffect, useState } from 'react';
@@ -92,6 +92,16 @@ export function SiteHeader() {
         <div className="flex items-center gap-1">
           <Button
             asChild
+            className="hidden h-9 gap-2 rounded-lg px-3 text-xs font-bold xl:flex"
+            variant="outline"
+          >
+            <Link href="/documentacion">
+              <BookOpen aria-hidden size={15} />
+              Docs
+            </Link>
+          </Button>
+          <Button
+            asChild
             className="hidden h-9 gap-2 rounded-lg bg-blue-700 px-3 text-xs font-bold text-white shadow-sm hover:bg-blue-800 sm:flex"
           >
             <Link href="/hoja-de-vida" rel="noreferrer" target="_blank">
@@ -144,6 +154,14 @@ export function SiteHeader() {
           >
             <FileText aria-hidden size={16} />
             Imprimir hoja de vida
+          </Link>
+          <Link
+            className="mt-1 flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-bold text-blue-700 hover:bg-blue-700/10 dark:text-cyan-300 dark:hover:bg-cyan-400/10"
+            href="/documentacion"
+            onClick={() => setMenuOpen(false)}
+          >
+            <BookOpen aria-hidden size={16} />
+            Documentación técnica
           </Link>
         </nav>
       ) : null}

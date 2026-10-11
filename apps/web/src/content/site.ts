@@ -1,15 +1,15 @@
 export const siteContent = {
   name: 'Edwin Gustavo Rodríguez',
-  role: 'Desarrollador de software · Ingeniero de sistemas',
-  roleEn: 'Software Developer · Systems Engineer',
+  role: 'Desarrollador de software · Backend, APIs y aplicaciones web',
+  roleEn: 'Software Developer · Backend, APIs and web applications',
   specialty: 'Aplicaciones web, APIs y redes',
   specialtyEn: 'Web applications, APIs and networks',
   summary:
-    'Hola, soy Edwin Rodríguez, desarrollador de software e ingeniero de sistemas. Cuento con conocimientos intermedios en backend y frontend, adquiridos en proyectos académicos, colaborativos y personales. Tengo experiencia práctica creando interfaces web, APIs REST y soluciones con persistencia de datos mediante Node.js, TypeScript, React, Next.js, Express, MongoDB y MySQL.',
+    'Soy Ingeniero de Sistemas y Tecnólogo en Desarrollo de Software y Redes, con más de 20 años de trayectoria en análisis de riesgos y protección de personas. Hoy aplico ese criterio al desarrollo de software de producción. Como desarrollador autónomo he diseñado, construido y desplegado dos sistemas web para clientes externos: EDS La Fortaleza y Pautas JI. Trabajo con arquitecturas monolíticas Node.js/Express, PostgreSQL y MySQL, Docker, PWA y Railway; incorporo sesiones persistentes, control de acceso por roles, consultas parametrizadas, hash de contraseñas y auditoría de acciones.',
   summaryEn:
-    'Hello, I am Edwin Rodríguez, a software developer and systems engineer. I have intermediate backend and frontend knowledge gained through academic, collaborative and personal projects. I have hands-on experience building web interfaces, REST APIs and data-driven solutions with Node.js, TypeScript, React, Next.js, Express, MongoDB and MySQL.',
-  availability: 'Buscando mi próxima oportunidad junior',
-  availabilityEn: 'Looking for my next junior opportunity',
+    'I am a Systems Engineer and Software Development and Networking Technologist with more than 20 years of experience in risk analysis and personal protection. I now apply that judgement to production software. As an independent developer, I have designed, built and deployed two web systems for external clients: EDS La Fortaleza and Pautas JI. I work with Node.js/Express monoliths, PostgreSQL and MySQL, Docker, PWAs and Railway, incorporating persistent sessions, role-based access control, parameterized queries, password hashing and action auditing.',
+  availability: 'Disponible para oportunidades de desarrollo de software',
+  availabilityEn: 'Available for software development opportunities',
   email: 'rodriguezedwingustavo@gmail.com',
   github: {
     label: 'github.com/edwguro',

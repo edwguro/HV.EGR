@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
   ),
   title: {
-    default: 'Edwin Gustavo Rodríguez | Desarrollador de software junior',
+    default: 'Edwin Gustavo Rodríguez | Desarrollador de software',
     template: '%s | Edwin Gustavo Rodríguez',
   },
   description:
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
       'Ingeniería de sistemas, desarrollo de software, aplicaciones web y redes.',
     locale: 'es_CO',
     siteName: 'Edwin Gustavo Rodríguez',
-    title: 'Edwin Gustavo Rodríguez | Desarrollador de software junior',
+    title: 'Edwin Gustavo Rodríguez | Desarrollador de software',
     type: 'website',
     url: '/',
   },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     description:
       'Ingeniería de sistemas, desarrollo de software, aplicaciones web y redes.',
-    title: 'Edwin Gustavo Rodríguez | Desarrollador de software junior',
+    title: 'Edwin Gustavo Rodríguez | Desarrollador de software',
   },
 };
 

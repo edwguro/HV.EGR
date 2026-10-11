@@ -12,11 +12,11 @@
 
 ## Perfil técnico
 
-Soy **Edwin Gustavo Rodríguez**, ingeniero de sistemas y desarrollador de software con conocimientos intermedios en frontend y backend. Mi experiencia en desarrollo se ha construido principalmente mediante productos autónomos, proyectos académicos y soluciones colaborativas que he llevado desde la identificación del problema hasta una implementación funcional.
+Soy **Edwin Gustavo Rodríguez**, Ingeniero de Sistemas y Tecnólogo en Desarrollo de Software y Redes. Tengo más de 20 años de trayectoria en análisis de riesgos y protección de personas; hoy aplico ese criterio a la construcción de software de producción, con una mirada práctica sobre seguridad, continuidad operativa, trazabilidad y manejo responsable de información.
 
-Mi trabajo no se presenta como experiencia empresarial formal en un cargo de desarrollo. Se presenta como **experiencia práctica verificable**: análisis de requisitos, modelado de datos, diseño de arquitectura, implementación frontend y backend, integración de bases de datos, pruebas, contenedores, documentación y despliegue. Este repositorio muestra cómo organizo y ejecuto ese ciclo completo.
+Como desarrollador autónomo he diseñado, construido y desplegado dos aplicaciones web para clientes externos: **EDS La Fortaleza**, para la gestión integral de una estación de servicio, y **Pautas JI**, para la administración comercial y audiovisual de James Informa. Son soluciones verificables en uso real que cubren análisis de requisitos, modelado relacional, backend, interfaz, autenticación, persistencia, despliegue y mantenimiento.
 
-Además de mi formación tecnológica, aporto una trayectoria de veinte años en seguridad y protección de personas. Esa experiencia fortalece competencias transferibles al desarrollo de software: análisis de riesgos, disciplina operativa, manejo responsable de información, trazabilidad y toma de decisiones en escenarios críticos.
+En estas implementaciones he trabajado con arquitecturas monolíticas Node.js/Express, PostgreSQL y MySQL, Docker, PWA y Railway. Aplico controles verificables: sesiones persistentes, control de acceso por roles, consultas SQL parametrizadas, hash de contraseñas, cabeceras de seguridad, validación de archivos y auditoría de acciones. No se publican métricas de clientes que no estén autorizadas; las demos, capturas y repositorios públicos son la evidencia disponible.
 
 ## Qué resuelve este producto
 
@@ -33,19 +33,22 @@ El portafolio transforma una hoja de vida estática en una aplicación consultab
 
 ## Proyectos que demuestran experiencia aplicada
 
-| Producto                                    | Problema abordado                                                                                                         | Aporte full-stack                                                                                        | Tecnologías principales                                        | Evidencia                                                                                                                           |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Taxi Ji**                                 | Control de vehículos, conductores, producción, gastos, mantenimiento, documentos y rentabilidad de una flota.             | Modelado operativo y financiero, interfaz de seguimiento, API y persistencia relacional.                 | React, NestJS, PostgreSQL, Prisma                              | [Código](https://github.com/edwguro/taxi-ji)                                                                                        |
-| **Territorio 360**                          | Lectura de patrones, escenarios, actores y puntos críticos para apoyar decisiones territoriales.                          | Experiencia geoespacial, navegación institucional y visualización analítica sobre mapas.                 | TypeScript, React, Node.js, PostgreSQL, Leaflet, OpenStreetMap | Demostración privada en el portafolio                                                                                               |
-| **Gestión administrativa EDS Combustibles** | Centralización de ventas, rentabilidad, caja, cartera, inventario, personal y operación de una estación de servicio.      | Dashboard gerencial, reglas operativas, reportes y despliegue de una solución usada en un contexto real. | JavaScript, Node.js, Express, EJS, MySQL, Railway              | [Repositorio](https://github.com/edwguro/EDS-LA-FORTALEZA) · [Aplicación](https://eds-la-fortaleza-production-9a15.up.railway.app/) |
-| **Edufree API**                             | Administración académica mediante servicios REST y persistencia documental.                                               | Diseño de modelos, controladores, repositorios, autenticación y documentación de endpoints.              | TypeScript, LoopBack 4, MongoDB, Docker, OpenAPI               | [Código](https://github.com/edwguro/BackendEdufree-G28-E2)                                                                          |
-| **Ganadería App**                           | Gestión administrativa y sanitaria de ejemplares: historias clínicas, razas, pesos, vacunas, reproducción y trazabilidad. | Modelado de dominio, flujos de ganaderos/veterinarios y seguimiento del ciclo productivo.                | C#, .NET Core, HTML, CSS                                       | [Código](https://github.com/edwguro/EquipoColaborativo4)                                                                            |
+| Producto                                    | Problema abordado                                                                                                         | Aporte full-stack                                                                                          | Tecnologías principales                                        | Evidencia                                                                                                                           |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Pautas JI**                               | Administración de clientes, planes de pauta, actividad comercial, contenido audiovisual, recaudo e informes mensuales.    | Plataforma PWA para cliente externo, con sesión persistente, roles, auditoría y dashboard con indicadores. | Node.js 22, Express 5, PostgreSQL, Chart.js, Docker, Railway   | [Aplicación](https://pautas-ji-web-production.up.railway.app/)                                                                      |
+| **Taxi Ji**                                 | Control de vehículos, conductores, producción, gastos, mantenimiento, documentos y rentabilidad de una flota.             | Modelado operativo y financiero, interfaz de seguimiento, API y persistencia relacional.                   | React, NestJS, PostgreSQL, Prisma                              | [Código](https://github.com/edwguro/taxi-ji)                                                                                        |
+| **Territorio 360**                          | Lectura de patrones, escenarios, actores y puntos críticos para apoyar decisiones territoriales.                          | Experiencia geoespacial, navegación institucional y visualización analítica sobre mapas.                   | TypeScript, React, Node.js, PostgreSQL, Leaflet, OpenStreetMap | Demostración privada en el portafolio                                                                                               |
+| **Gestión administrativa EDS Combustibles** | Centralización de ventas, rentabilidad, caja, cartera, inventario, personal y operación de una estación de servicio.      | Dashboard gerencial, reglas operativas, reportes y despliegue de una solución usada en un contexto real.   | JavaScript, Node.js, Express, EJS, MySQL, Railway              | [Repositorio](https://github.com/edwguro/EDS-LA-FORTALEZA) · [Aplicación](https://eds-la-fortaleza-production-9a15.up.railway.app/) |
+| **Edufree API**                             | Administración académica mediante servicios REST y persistencia documental.                                               | Diseño de modelos, controladores, repositorios, autenticación y documentación de endpoints.                | TypeScript, LoopBack 4, MongoDB, Docker, OpenAPI               | [Código](https://github.com/edwguro/BackendEdufree-G28-E2)                                                                          |
+| **Ganadería App**                           | Gestión administrativa y sanitaria de ejemplares: historias clínicas, razas, pesos, vacunas, reproducción y trazabilidad. | Modelado de dominio, flujos de ganaderos/veterinarios y seguimiento del ciclo productivo.                  | C#, .NET Core, HTML, CSS                                       | [Código](https://github.com/edwguro/EquipoColaborativo4)                                                                            |
 
 Estos proyectos cubren distintos dominios —transporte, territorio, combustibles, educación y ganadería— y muestran capacidad para convertir reglas de negocio en productos de software mantenibles.
 
 ## Arquitectura de software
 
 El sistema utiliza un **monolito modular dentro de un monorepo**. Esta decisión reduce complejidad operativa para el tamaño actual del producto, mantiene límites claros entre presentación, aplicación, datos e integraciones, y permite separar servicios más adelante si el dominio o la escala lo justifican.
+
+Esta arquitectura corresponde al **portafolio/HV EGR**. Los sistemas EDS La Fortaleza y Pautas JI se documentan como experiencias de producto separadas: ambos usan un monolito Node.js/Express y base de datos relacional, pero sus fuentes, credenciales y datos operativos no forman parte de este repositorio.
 
 ```mermaid
 flowchart LR
@@ -198,6 +201,14 @@ erDiagram
 └── turbo.json               # Pipeline del monorepo
 ```
 
+### Organización por responsabilidad
+
+- Las rutas de `apps/web/src/app` resuelven vistas públicas, hoja de vida imprimible, metadatos y páginas de detalle.
+- `apps/web/src/components/sections` compone las vistas del portafolio; los componentes de interacción reutilizables se mantienen fuera de esa carpeta.
+- `apps/web/src/lib/api.ts` concentra el acceso server-side a la API, por lo que las vistas no conocen detalles de HTTP ni variables de entorno.
+- `apps/api/src/modules/<dominio>` agrupa controlador, servicio, DTO y dependencias por capacidad: perfil, proyectos, habilidades, contacto, GitHub e IA.
+- `apps/api/src/database` contiene exclusivamente el acceso a datos y `prisma` concentra esquema, migraciones y semilla reproducible.
+
 ## Ejecución local
 
 ### Requisitos
@@ -229,6 +240,17 @@ Para ejecutar el stack completo en contenedores:
 ```powershell
 docker compose --profile full up --build
 ```
+
+## Despliegue en Railway
+
+El despliegue está preparado como **dos servicios** más PostgreSQL administrado:
+
+| Servicio | Dockerfile            | Variable de puerto                                                       | Variables esenciales                                                                                      |
+| -------- | --------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| API      | `apps/api/Dockerfile` | Railway asigna `PORT`; la API lo usa cuando `API_PORT` no está definido. | `DATABASE_URL`, `CORS_ORIGINS`, `GITHUB_USERNAME` y las integraciones que se habiliten.                   |
+| Web      | `apps/web/Dockerfile` | Railway asigna `PORT` al servidor Next.js.                               | `NEXT_PUBLIC_API_URL` con la URL pública de la API y `NEXT_PUBLIC_SITE_URL` con la URL pública de la web. |
+
+Antes del primer despliegue, crea la base PostgreSQL en Railway, configura `DATABASE_URL` en la API y ejecuta las migraciones/semilla desde un entorno seguro. No subas `.env`, tokens ni credenciales al repositorio. El `README` y la ruta `/documentacion` quedan disponibles para revisar arquitectura y operación desde la aplicación publicada.
 
 ## Actualización de la hoja de vida
 

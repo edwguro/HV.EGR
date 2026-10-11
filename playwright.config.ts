@@ -16,7 +16,7 @@ export default defineConfig({
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
   webServer: [
     {
-      command: 'corepack pnpm --filter api dev',
+      command: 'corepack pnpm --filter @portfolio/api dev',
       name: 'API',
       reuseExistingServer: !process.env.CI,
       stderr: 'pipe',
@@ -24,7 +24,7 @@ export default defineConfig({
       url: 'http://localhost:4000/api/v1/health',
     },
     {
-      command: 'corepack pnpm --filter web dev',
+      command: 'corepack pnpm --filter @portfolioEGR/web dev',
       name: 'Web',
       reuseExistingServer: !process.env.CI,
       stderr: 'pipe',

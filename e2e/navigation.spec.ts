@@ -5,7 +5,7 @@ test('permite recorrer las secciones principales del portafolio', async ({
 }) => {
   await page.goto('/', { waitUntil: 'domcontentloaded' });
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
-    'Desarrollo de aplicaciones web',
+    'Desarrollo de software',
   );
 
   const routes = [

@@ -1,6 +1,9 @@
 .git
 .next
 .turbo
+.turbo/**
+**/.turbo
+**/.turbo/**
 coverage
 dist
 node_modules

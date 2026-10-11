@@ -21,10 +21,10 @@ export interface ResumeEducation {
 
 export const resumeData = {
   profile: {
-    fullName: 'Ing. Edwin Gustavo Rodríguez B.',
-    headline: 'Desarrollador de software e ingeniero de sistemas',
+    fullName: 'Edwin Gustavo Rodríguez B.',
+    headline: 'Desarrollador de software · Backend, APIs y aplicaciones web',
     professionalSummary:
-      'Hola, soy Edwin Rodríguez, desarrollador de software e ingeniero de sistemas. Cuento con conocimientos intermedios en backend y frontend, adquiridos en proyectos académicos, colaborativos y personales. Tengo experiencia práctica creando interfaces web, APIs REST y soluciones con persistencia de datos mediante Node.js, TypeScript, React, Next.js, Express, MongoDB y MySQL. Adicionalmente, cuento con una trayectoria de 20 años en sistemas de seguridad y protección de personas, análisis de riesgos, protección de altos dignatarios, entrenamiento militar avanzado y conocimientos en ciberseguridad y ciberdefensa.',
+      'Soy Ingeniero de Sistemas y Tecnólogo en Desarrollo de Software y Redes, con más de 20 años de trayectoria en análisis de riesgos y protección de personas. Hoy aplico ese criterio al desarrollo de software de producción. Como desarrollador autónomo he diseñado, construido y desplegado dos sistemas web para clientes externos: EDS La Fortaleza y Pautas JI. Trabajo con arquitecturas monolíticas Node.js/Express, PostgreSQL y MySQL, Docker, PWA y Railway; incorporo sesiones persistentes, control de acceso por roles, consultas parametrizadas, hash de contraseñas y auditoría de acciones.',
     location: 'Villavicencio, Meta, Colombia',
     email: 'rodriguezedwingustavo@gmail.com',
     githubUrl: 'https://github.com/edwguro',
@@ -46,15 +46,13 @@ export const resumeData = {
       certificateUrl: '/documents/certificado-eds-la-fortaleza.pdf',
     },
     {
-      company: 'Developer Freelance',
-      role: 'Developer Software',
+      company: 'Meta Tech Software Solution',
+      role: 'Fundador y Desarrollador Full Stack',
       description:
-        'Desarrolador independiente, diseño y desarrollo e implementacion de soluciones de software para PYMES. ',
+        'Diseño, desarrollo y despliegue autónomo de soluciones de software para clientes y organizaciones. He construido y mantengo EDS La Fortaleza y Pautas JI: sistemas web en producción para gestión operativa, financiera y comercial. Aplico Node.js, Express, PostgreSQL, MySQL, Docker, PWA, Railway y prácticas de seguridad como RBAC, sesiones persistentes, consultas parametrizadas, hash de contraseñas y auditoría.',
       location: 'Villavicencio, Meta',
-      startDate: '2025-01-01',
-      endDate: '2026-07-31',
-      isCurrent: false,
-      // certificateUrl: '/documents/certificado-eds-la-fortaleza.pdf',
+      startDate: '2025-12-01',
+      isCurrent: true,
     },
     {
       company: 'Unidad Nacional de Protección (UNP) · Contratista',
@@ -129,8 +127,6 @@ export const resumeData = {
         'Formación en fundamentos de Node.js, diseño y construcción de soluciones web, análisis y modelado de datos, arquitectura MVC y levantamiento de requisitos.',
       startDate: '2023-01-15',
       endDate: '2023-10-01',
-      certificateUrl:
-        'https://drive.google.com/file/d/1xXFR3HKeXs6OKoLAVqggU7ROneqp07Y3/view?usp=drivesdk',
     },
     {
       institution: 'CUN',
@@ -146,14 +142,13 @@ export const resumeData = {
     {
       institution: 'Universidad de Caldas',
       degree:
-        'Programa MinTIC · Desarrollo de software en aplicaciones web · 800 horas',
+        'Diplomado en habilidades en programación con énfasis en aplicaciones web · Misión TIC 2022',
       field: 'Desarrollo de software',
       description:
-        'Programa de desarrollo de aplicaciones web con JavaScript, Node.js, C#, .NET y TypeScript; ingeniería de software, Git, bases de datos relacionales y no relacionales, entornos cloud, metodologías ágiles, seguridad y experiencia de usuario.',
-      startDate: '2019-04-01',
-      endDate: '2023-06-01',
-      certificateUrl:
-        'https://drive.google.com/file/d/1xXFR3HKeXs6OKoLAVqggU7ROneqp07Y3/view?usp=drivesdk',
+        'Formación intensiva de 800 horas en programación con énfasis en aplicaciones web, cursada como beneficiario del programa Misión TIC 2022.',
+      startDate: '2021-05-03',
+      endDate: '2021-12-18',
+      certificateUrl: '/documents/acta-ucaldas-desarrollo-software.pdf',
     },
     {
       institution: 'CUN',
@@ -163,8 +158,6 @@ export const resumeData = {
         'Formación técnica profesional en soporte, informática y fundamentos de infraestructura tecnológica.',
       startDate: '2019-04-01',
       endDate: '2023-06-01',
-      certificateUrl:
-        'https://drive.google.com/file/d/1xXFR3HKeXs6OKoLAVqggU7ROneqp07Y3/view?usp=drivesdk',
     },
   ] as ResumeEducation[],
 } as const;

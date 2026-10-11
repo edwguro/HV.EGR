@@ -145,7 +145,26 @@ export function EducationCard({ education }: { education: EducationResponse }) {
                 </a>
               </div>
             </div>
-          ) : null}
+          ) : (
+            <div className="flex items-start gap-1.5">
+              <Award
+                aria-hidden
+                className="mt-0.5 shrink-0 text-amber-600 dark:text-amber-300"
+                size={13}
+              />
+              <div>
+                <p className="font-mono text-[0.52rem] font-bold tracking-[0.08em] text-slate-500 uppercase dark:text-slate-400">
+                  Certificación
+                </p>
+                <p className="font-bold text-amber-700 dark:text-amber-300">
+                  <BilingualText
+                    en="Certificate pending"
+                    es="Pendiente de certificado"
+                  />
+                </p>
+              </div>
+            </div>
+          )}
           <div className="flex items-start gap-1.5">
             <Eye
               aria-hidden
@@ -258,7 +277,15 @@ export function EducationCard({ education }: { education: EducationResponse }) {
               />{' '}
               <ExternalLink aria-hidden size={14} />
             </a>
-          ) : null}
+          ) : (
+            <p className="mt-5 inline-flex items-center gap-2 rounded-lg border border-dashed border-amber-500/35 bg-amber-500/8 px-4 py-2.5 text-sm font-bold text-amber-700 dark:text-amber-300">
+              <Award aria-hidden size={16} />{' '}
+              <BilingualText
+                en="Certificate pending"
+                es="Pendiente de certificado"
+              />
+            </p>
+          )}
         </div>
       </dialog>
     </>

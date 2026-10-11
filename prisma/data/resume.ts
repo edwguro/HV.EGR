@@ -21,10 +21,10 @@ export interface ResumeEducation {
 
 export const resumeData = {
   profile: {
-    fullName: 'Edwin Gustavo Rodríguez B.',
+    fullName: 'Edwin Gustavo Rodríguez Balcázares',
     headline: 'Desarrollador de software · Backend, APIs y aplicaciones web',
     professionalSummary:
-      'Soy Ingeniero de Sistemas y Tecnólogo en Desarrollo de Software y Redes, con más de 20 años de trayectoria en análisis de riesgos y protección de personas. Hoy aplico ese criterio al desarrollo de software de producción. Como desarrollador autónomo he diseñado, construido y desplegado dos sistemas web para clientes externos: EDS La Fortaleza y Pautas JI. Trabajo con arquitecturas monolíticas Node.js/Express, PostgreSQL y MySQL, Docker, PWA y Railway; incorporo sesiones persistentes, control de acceso por roles, consultas parametrizadas, hash de contraseñas y auditoría de acciones.',
+      'Soy Ingeniero de Sistemas y Tecnólogo en Desarrollo de Software y Redes, con más de 20 años de trayectoria en seguridad, análisis de riesgos y protección de personas. Hoy aplico ese criterio al desarrollo de software de producción. Como desarrollador autónomo he diseñado, construido y desplegado dos sistemas web para clientes externos: EDS La Fortaleza y Pautas JI. Trabajo con arquitecturas monolíticas Node.js/Express, PostgreSQL y MySQL, Docker, PWA y Railway; incorporo sesiones persistentes, control de acceso por roles, consultas parametrizadas, hash de contraseñas y auditoría de acciones.',
     location: 'Villavicencio, Meta, Colombia',
     email: 'rodriguezedwingustavo@gmail.com',
     githubUrl: 'https://github.com/edwguro',

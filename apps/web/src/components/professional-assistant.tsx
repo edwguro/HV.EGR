@@ -5,7 +5,7 @@ import { useState, type FormEvent } from 'react';
 import { Button } from './ui/button';
 
 const apiUrl =
-  process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000/api/v1';
+  process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4100/api/v1';
 
 export function ProfessionalAssistant() {
   const [answer, setAnswer] = useState(

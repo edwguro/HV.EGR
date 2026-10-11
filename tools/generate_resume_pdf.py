@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "apps" / "web" / "public" / "documents" / "edwin-rodriguez-hv.pdf"
-RESUME_URL = "http://localhost:3000/hoja-de-vida"
+RESUME_URL = "http://localhost:3100/hoja-de-vida"
 
 
 def find_browser() -> Path:

@@ -8,7 +8,7 @@ export default defineConfig({
   workers: 1,
   reporter: process.env.CI ? [['line'], ['html', { open: 'never' }]] : 'list',
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:3100',
     screenshot: 'only-on-failure',
     trace: 'on-first-retry',
     video: 'retain-on-failure',
@@ -21,7 +21,7 @@ export default defineConfig({
       reuseExistingServer: !process.env.CI,
       stderr: 'pipe',
       timeout: 120_000,
-      url: 'http://localhost:4000/api/v1/health',
+      url: 'http://localhost:4100/api/v1/health',
     },
     {
       command: 'corepack pnpm --filter @portfolioEGR/web dev',
@@ -29,7 +29,7 @@ export default defineConfig({
       reuseExistingServer: !process.env.CI,
       stderr: 'pipe',
       timeout: 120_000,
-      url: 'http://localhost:3000',
+      url: 'http://localhost:3100',
     },
   ],
 });

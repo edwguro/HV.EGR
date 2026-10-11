@@ -29,7 +29,7 @@ export function validateEnvironment(
 ): Environment {
   const nodeEnv = readString(input.NODE_ENV, 'development');
   const databaseUrl = readString(input.DATABASE_URL, '').trim();
-  const apiPort = Number(readString(input.API_PORT ?? input.PORT, '4000'));
+  const apiPort = Number(readString(input.API_PORT ?? input.PORT, '4100'));
 
   if (!supportedEnvironments.has(nodeEnv as Environment['NODE_ENV'])) {
     throw new Error('NODE_ENV must be development, test, or production.');
@@ -48,7 +48,7 @@ export function validateEnvironment(
 
   return {
     API_PORT: apiPort,
-    CORS_ORIGINS: readString(input.CORS_ORIGINS, 'http://localhost:3000'),
+    CORS_ORIGINS: readString(input.CORS_ORIGINS, 'http://localhost:3100'),
     CONTACT_NOTIFICATION_TO:
       readString(input.CONTACT_NOTIFICATION_TO, '') || undefined,
     DATABASE_URL: databaseUrl,

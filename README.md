@@ -119,8 +119,8 @@ flowchart LR
 
 ## API REST
 
-Base local: `http://localhost:4000/api/v1`  
-Documentación interactiva: `http://localhost:4000/docs`
+Base local: `http://localhost:4100/api/v1`
+Documentación interactiva: `http://localhost:4100/docs`
 
 | Método | Endpoint               | Función                                                                      |
 | ------ | ---------------------- | ---------------------------------------------------------------------------- |
@@ -231,9 +231,9 @@ corepack pnpm dev
 
 Servicios locales:
 
-- Portafolio: <http://localhost:3000>
-- API: <http://localhost:4000/api/v1>
-- Swagger: <http://localhost:4000/docs>
+- Portafolio: <http://localhost:3100>
+- API: <http://localhost:4100/api/v1>
+- Swagger: <http://localhost:4100/docs>
 
 Para ejecutar el stack completo en contenedores:
 

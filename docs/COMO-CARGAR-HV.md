@@ -41,7 +41,7 @@ corepack pnpm db:seed
 La página en desarrollo actualizará los datos desde PostgreSQL. Comprueba el resultado en:
 
 ```text
-http://localhost:3000
+http://localhost:3100
 ```
 
 ## Recomendaciones de contenido

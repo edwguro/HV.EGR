@@ -6,7 +6,7 @@ import { Button } from './ui/button';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 const apiUrl =
-  process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000/api/v1';
+  process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4100/api/v1';
 const fieldClass =
   'mt-1 w-full rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none transition placeholder:text-muted-foreground/65 focus:border-accent focus:ring-2 focus:ring-accent/15';
 

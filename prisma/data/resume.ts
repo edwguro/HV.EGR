@@ -86,7 +86,7 @@ export const resumeData = {
     },
     {
       company: 'Ejército Nacional de Colombia',
-      role: 'SLP-BAFER2',
+      role: 'SLP-Operaciones Especiales',
       description:
         'Operaciones especiales antiterrorismo en todo el territorio nacional colombiano.',
       location: 'Territorio nacional',

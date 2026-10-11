@@ -14,6 +14,10 @@ RUN pnpm install --frozen-lockfile
 
 FROM dependencies AS builder
 COPY . .
+# Prisma validates DATABASE_URL while generating the client, although it does
+# not establish a database connection during this build stage. Railway supplies
+# the real value at deploy time through the PostgreSQL service reference.
+ENV DATABASE_URL=postgresql://build:build@localhost:5432/portfolio
 RUN pnpm db:generate && pnpm --filter @portfolio/api build
 
 FROM node:24-alpine AS runner

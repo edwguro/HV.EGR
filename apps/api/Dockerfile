@@ -21,9 +21,13 @@ ENV NODE_ENV=production
 WORKDIR /app
 RUN addgroup --system --gid 1001 nestjs && adduser --system --uid 1001 nestjs
 COPY --from=dependencies --chown=nestjs:nestjs /app/node_modules ./node_modules
+COPY --from=builder --chown=nestjs:nestjs /app/package.json ./package.json
+COPY --from=builder --chown=nestjs:nestjs /app/prisma.config.ts ./prisma.config.ts
+COPY --from=builder --chown=nestjs:nestjs /app/prisma ./prisma
 COPY --from=dependencies --chown=nestjs:nestjs /app/apps/api/node_modules ./apps/api/node_modules
 COPY --from=builder --chown=nestjs:nestjs /app/apps/api/dist ./apps/api/dist
 COPY --from=builder --chown=nestjs:nestjs /app/apps/api/package.json ./apps/api/package.json
+COPY --from=builder --chown=nestjs:nestjs /app/apps/api/src/generated ./apps/api/src/generated
 USER nestjs
 EXPOSE 4000
 CMD ["node", "apps/api/dist/main.js"]

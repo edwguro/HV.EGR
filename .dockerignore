@@ -1,5 +1,7 @@
 .git
 .next
+**/.next
+**/.next/**
 .turbo
 .turbo/**
 **/.turbo

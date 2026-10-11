@@ -252,6 +252,15 @@ El despliegue está preparado como **dos servicios** más PostgreSQL administrad
 
 Antes del primer despliegue, crea la base PostgreSQL en Railway, configura `DATABASE_URL` en la API y ejecuta las migraciones/semilla desde un entorno seguro. No subas `.env`, tokens ni credenciales al repositorio. El `README` y la ruta `/documentacion` quedan disponibles para revisar arquitectura y operación desde la aplicación publicada.
 
+### Configuración por servicio
+
+Como es un monorepo con paquetes compartidos, conserva el directorio raíz en `/` y configura en cada servicio su Dockerfile:
+
+- **API:** `apps/api/Dockerfile`, healthcheck `/api/v1/health` y pre-despliegue `npx prisma migrate deploy && npx tsx prisma/seed.ts`.
+- **Web:** `apps/web/Dockerfile`, healthcheck `/`.
+
+En la API, define `DATABASE_URL` como referencia a la variable `DATABASE_URL` del servicio PostgreSQL y `CORS_ORIGINS` con el dominio público que Railway genere para la web. En la Web, define `NEXT_PUBLIC_API_URL` con la URL pública completa de la API terminada en `/api/v1` y `NEXT_PUBLIC_SITE_URL` con su dominio público. Los valores `NEXT_PUBLIC_*` se aplican durante el build, por lo que hay que redeplegar la Web después de configurarlos.
+
 ## Actualización de la hoja de vida
 
 La información profesional se edita en `prisma/data/resume.ts`. Después de guardar:

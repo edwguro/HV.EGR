@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';
 import { SiteHeader } from '@/components/site-header';
 import { ThemeProvider } from '@/components/theme-provider';
+import { getSiteUrl } from '@/lib/site-url';
 import './globals.css';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
@@ -12,9 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3100',
-  ),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: 'Edwin Gustavo Rodríguez | Desarrollador de software',
     template: '%s | Edwin Gustavo Rodríguez',

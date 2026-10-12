@@ -1,15 +1,19 @@
 import type { Metadata } from 'next';
-import { Mail, MapPin } from 'lucide-react';
+import { ExternalLink, Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { ResumeActions } from '@/components/resume-actions';
 import { siteContent } from '@/content/site';
-import { getProfile, getSkills } from '@/lib/api';
+import { getProfile, getProjects, getSkills } from '@/lib/api';
 
 export const metadata: Metadata = {
   title: 'Hoja de vida | Edwin Gustavo Rodríguez',
   description: 'Hoja de vida profesional, imprimible y descargable en PDF.',
 };
+
+// The resume depends on the production profile and projects. Render it at
+// request time so a database seed or content update cannot leave a cached 404.
+export const dynamic = 'force-dynamic';
 
 const categoryLabels = {
   API: 'APIs',
@@ -56,7 +60,11 @@ function WhatsAppMark() {
 }
 
 export default async function ResumePage() {
-  const [profile, skillGroups] = await Promise.all([getProfile(), getSkills()]);
+  const [profile, skillGroups, projects] = await Promise.all([
+    getProfile(),
+    getSkills(),
+    getProjects(),
+  ]);
   if (!profile) notFound();
   const displayName = profile.fullName.replace(/^Ing\.\s*/i, '');
 
@@ -143,6 +151,30 @@ export default async function ResumePage() {
               </span>
             ) : null}
           </div>
+          <a
+            className="mt-5 flex items-center justify-between gap-4 rounded-xl border border-cyan-200/65 bg-cyan-950/35 px-4 py-3 text-left transition hover:bg-cyan-950/55 print:mt-3 print:rounded-lg print:px-3 print:py-2"
+            href="https://hv-egr.up.railway.app/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <span>
+              <span className="block text-[0.66rem] font-black tracking-[0.14em] text-cyan-200 uppercase print:text-[7pt]">
+                Portafolio profesional y casos de estudio
+              </span>
+              <span className="mt-1 block text-sm leading-snug font-semibold text-white print:text-[8.5pt]">
+                En este sitio web encontrará todo lo que necesita conocer sobre
+                mi perfil profesional, experiencia y proyectos.
+              </span>
+              <span className="mt-1 block font-mono text-xs font-bold text-cyan-200 print:text-[7.5pt]">
+                https://hv-egr.up.railway.app/
+              </span>
+            </span>
+            <ExternalLink
+              aria-hidden
+              className="shrink-0 text-cyan-200"
+              size={22}
+            />
+          </a>
         </header>
 
         <div className="grid gap-7 px-7 py-7 sm:grid-cols-[1.55fr_0.85fr] sm:px-10 print:grid-cols-[1.55fr_0.85fr] print:gap-5 print:px-8 print:py-4">
@@ -238,6 +270,53 @@ export default async function ResumePage() {
             </section>
           </aside>
         </div>
+
+        <section
+          aria-labelledby="resume-projects"
+          className="border-t border-slate-200 px-7 pt-1 pb-7 sm:px-10 print:break-before-page print:border-t-0 print:px-8 print:pt-7 print:pb-6"
+        >
+          <h2 id="resume-projects" className="resume-title">
+            Proyectos propios y en producción
+          </h2>
+          <p className="mt-2 text-[0.72rem] leading-relaxed text-slate-600 print:mt-1 print:text-[7pt] print:leading-[1.35]">
+            Casos de estudio y detalles técnicos disponibles en{' '}
+            <a
+              className="font-bold text-blue-700"
+              href="https://hv-egr.up.railway.app/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              hv-egr.up.railway.app
+            </a>
+            .
+          </p>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2 print:mt-2 print:grid-cols-3 print:gap-2">
+            {projects.map((project) => (
+              <article
+                className="break-inside-avoid rounded-md border border-slate-200 bg-slate-50 px-3 py-2 print:px-2 print:py-1.5"
+                key={project.slug}
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-[0.72rem] leading-snug font-extrabold text-slate-950 print:text-[7.3pt]">
+                    {project.title}
+                  </h3>
+                  <span
+                    className={`shrink-0 rounded-full px-1.5 py-0.5 text-[0.57rem] font-black tracking-wide uppercase print:text-[5.8pt] ${
+                      project.demoUrl
+                        ? 'bg-emerald-100 text-emerald-800'
+                        : 'bg-blue-100 text-blue-800'
+                    }`}
+                  >
+                    {project.demoUrl ? 'En producción' : 'Proyecto propio'}
+                  </span>
+                </div>
+                <p className="mt-1 text-[0.64rem] leading-snug text-slate-600 print:text-[6.2pt]">
+                  {project.category} · {project.technologies.join(' · ')}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
       </article>
     </main>
   );

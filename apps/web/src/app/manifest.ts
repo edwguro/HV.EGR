@@ -8,6 +8,13 @@ export default function manifest(): MetadataRoute.Manifest {
       'Portafolio profesional de ingeniería de sistemas y desarrollo de software.',
     display: 'standalone',
     background_color: '#0e100f',
+    icons: [
+      {
+        sizes: 'any',
+        src: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
     theme_color: '#0f766e',
     start_url: '/',
   };

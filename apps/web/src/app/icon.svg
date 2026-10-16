@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">EGR Software Developer</title>
+  <defs>
+    <linearGradient id="background" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f3d8f" />
+      <stop offset="0.52" stop-color="#087c9b" />
+      <stop offset="1" stop-color="#0b203d" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#background)" />
+  <rect x="5" y="5" width="54" height="54" rx="12" fill="none" stroke="#67e8f9" stroke-opacity=".5" />
+  <path d="M17 19h17v7H25v5h8v7h-8v5h10v7H17V19Z" fill="#fff" />
+  <path d="M49 24.5c-2-1.2-4-1.8-6.1-1.8-6.5 0-10.9 5-10.9 12.6 0 8.1 4.5 13.1 11.4 13.1 1.8 0 3.5-.3 5.1-1v-12h-8v5.8h2.6v2.1c-3.4.5-5.2-2.2-5.2-7.6 0-4.8 1.9-7.2 5-7.2 1.6 0 3 .6 4.1 1.8l2-3.8Z" fill="#fbbf24" />
+</svg>

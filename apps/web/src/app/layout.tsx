@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   description:
     'Portafolio profesional de ingeniería de sistemas, desarrollo de software, aplicaciones web y redes.',
   alternates: { canonical: '/' },
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+  },
   authors: [{ name: 'Edwin Gustavo Rodríguez' }],
   creator: 'Edwin Gustavo Rodríguez',
   keywords: [

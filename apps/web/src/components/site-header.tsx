@@ -11,7 +11,7 @@ import { ThemeToggle } from './theme-toggle';
 import { Button } from './ui/button';
 
 const navStyle =
-  'text-slate-700 after:bg-gradient-to-r after:from-blue-700 after:via-cyan-500 after:to-amber-400 hover:-translate-y-0.5 hover:bg-blue-600/8 hover:text-blue-700 focus-visible:bg-blue-600/10 focus-visible:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/35 aria-[current=page]:bg-gradient-to-r aria-[current=page]:from-blue-700/10 aria-[current=page]:via-cyan-500/10 aria-[current=page]:to-amber-400/10 aria-[current=page]:text-blue-800 aria-[current=page]:shadow-sm dark:text-slate-200 dark:hover:bg-cyan-400/10 dark:hover:text-cyan-300 dark:focus-visible:text-cyan-300 dark:aria-[current=page]:text-cyan-300';
+  'text-slate-700 after:bg-gradient-to-r after:from-blue-700 after:via-cyan-500 after:to-amber-400 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-blue-700/12 hover:via-cyan-500/10 hover:to-amber-400/12 hover:text-blue-800 focus-visible:bg-blue-700/12 focus-visible:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/45 aria-[current=page]:bg-gradient-to-r aria-[current=page]:from-blue-700/18 aria-[current=page]:via-cyan-500/16 aria-[current=page]:to-amber-400/18 aria-[current=page]:text-blue-950 aria-[current=page]:shadow-[0_5px_16px_-10px_rgb(8_47_73_/_0.85)] dark:text-slate-100 dark:hover:from-blue-400/18 dark:hover:via-cyan-300/14 dark:hover:to-amber-300/14 dark:hover:text-cyan-100 dark:focus-visible:bg-cyan-300/14 dark:focus-visible:text-cyan-100 dark:aria-[current=page]:from-blue-400/28 dark:aria-[current=page]:via-cyan-300/24 dark:aria-[current=page]:to-amber-300/18 dark:aria-[current=page]:text-white dark:aria-[current=page]:shadow-[0_5px_18px_-10px_rgb(34_211_238_/_0.75)]';
 
 export function SiteHeader() {
   const [activeSection, setActiveSection] = useState('#inicio');
@@ -50,7 +50,7 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="site-header border-border/80 bg-background/90 sticky top-0 z-50 border-b shadow-[0_6px_24px_-20px_rgb(15_23_42_/_0.5)] backdrop-blur-xl print:hidden">
+    <header className="site-header sticky top-0 z-50 border-b border-blue-200/80 bg-gradient-to-r from-white/96 via-cyan-50/92 to-blue-50/96 shadow-[0_8px_26px_-20px_rgb(8_47_73_/_0.7)] backdrop-blur-xl dark:border-cyan-300/15 dark:from-slate-950/96 dark:via-slate-900/94 dark:to-cyan-950/80 dark:shadow-[0_8px_28px_-20px_rgb(34_211_238_/_0.45)] print:hidden">
       <div className="mx-auto flex min-h-16 max-w-[88rem] items-center justify-between gap-3 px-5 lg:px-8">
         <Link
           aria-label="EGR, Software Developer"
@@ -130,7 +130,7 @@ export function SiteHeader() {
       {menuOpen ? (
         <nav
           aria-label="Navegación móvil"
-          className="border-border bg-background grid border-t p-3 lg:hidden"
+          className="grid border-t border-blue-200/75 bg-gradient-to-br from-white via-cyan-50 to-blue-50 p-3 lg:hidden dark:border-cyan-300/15 dark:from-slate-950 dark:via-slate-900 dark:to-cyan-950"
         >
           {siteContent.navigation.map((item) => (
             <Link

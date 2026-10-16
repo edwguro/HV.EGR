@@ -86,9 +86,9 @@ export const resumeData = {
     },
     {
       company: 'Ejército Nacional de Colombia',
-      role: 'SLP-Operaciones Especiales',
+      role: 'Operaciones Especiales',
       description:
-        'Operaciones especiales antiterrorismo en todo el territorio nacional colombiano.',
+        'Realizar Operaciones especiales antiterrorismo en todo el territorio nacional colombiano en unidades de contraguerrilas y contraterrorismo.',
       location: 'Territorio nacional',
       startDate: '1999-09-29',
       endDate: '2006-03-15',

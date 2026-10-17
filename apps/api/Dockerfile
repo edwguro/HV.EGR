@@ -15,7 +15,9 @@ COPY packages/contracts/package.json packages/contracts/package.json
 COPY packages/ui/package.json packages/ui/package.json
 COPY packages/eslint-config/package.json packages/eslint-config/package.json
 COPY packages/typescript-config/package.json packages/typescript-config/package.json
-RUN --mount=type=cache,id=portfolio-pnpm-store,target=/pnpm/store,sharing=locked pnpm install --frozen-lockfile --prefer-offline
+# Keep dependency caching in this Docker layer. Railway requires service-specific
+# IDs for cache mounts, which would couple this image to one Railway service.
+RUN pnpm install --frozen-lockfile --prefer-offline
 
 FROM dependencies AS builder
 COPY . .

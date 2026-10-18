@@ -186,6 +186,9 @@ export default async function ResumePage() {
               <p className="mt-3 text-[0.82rem] leading-relaxed text-slate-700 print:mt-2 print:text-[7.8pt] print:leading-[1.45]">
                 {profile.professionalSummary}
               </p>
+              <p className="mt-2 text-[0.82rem] font-semibold text-slate-700 print:text-[7.8pt]">
+                {siteContent.credential}
+              </p>
             </section>
 
             <section aria-labelledby="resume-experience">

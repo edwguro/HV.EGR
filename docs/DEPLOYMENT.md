@@ -31,3 +31,5 @@ psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f prisma/tests/ejercito-experience.sql
 ```
 
 Después del despliegue, comprobar en los logs que se aplicó esa migración y que la API y la web muestran `Operaciones Especiales` con la descripción nueva, sin duplicar experiencias. Para revertir el contenido, crear una migración nueva con los valores anteriores del historial Git y los mismos filtros; no editar ni revertir manualmente una migración ya aplicada.
+
+Las migraciones `20261018100000_add_hv_egr_project` y `20261018100100_remove_pending_education` publican el proyecto Portafolio full-stack (tercero en la lista, con sus tecnologías y el orden de los demás ajustado) y retiran las dos formaciones sin certificado y el número de tarjeta profesional de la descripción de Ingeniero de Sistemas. Son idempotentes: el proyecto se crea solo si el slug no existe, el orden se mueve solo en filas que siguen en su posición anterior y la educación se filtra por perfil, institución, título y certificado ausente. Tras el despliegue de la API, comprobar en los logs que ambas se aplicaron y que la web muestra el proyecto y cuatro estudios.

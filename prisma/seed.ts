@@ -163,7 +163,7 @@ async function main(): Promise<void> {
       technologies: ['React', 'NestJS', 'PostgreSQL', 'Prisma'],
       repositoryUrl: 'https://github.com/edwguro/taxi-ji',
       screenshots: ['/images/projects/taxi-ji-showcase-v2.png'],
-      sortOrder: 3,
+      sortOrder: 4,
     },
     {
       slug: 'territorio-360',
@@ -183,7 +183,7 @@ async function main(): Promise<void> {
       ],
       repositoryUrl: null,
       screenshots: ['/images/projects/territorio-360-showcase.png'],
-      sortOrder: 4,
+      sortOrder: 5,
     },
     {
       slug: 'fortaleza-app',
@@ -228,7 +228,7 @@ async function main(): Promise<void> {
       ],
       repositoryUrl: 'https://github.com/edwguro/BackendEdufree-G28-E2',
       screenshots: ['/images/projects/edufree-showcase-v1.png'],
-      sortOrder: 5,
+      sortOrder: 6,
     },
     {
       slug: 'ganaderia-app',
@@ -241,7 +241,7 @@ async function main(): Promise<void> {
       technologies: ['C#', '.NET Core', 'HTML', 'CSS'],
       repositoryUrl: 'https://github.com/edwguro/EquipoColaborativo4',
       screenshots: ['/images/projects/ganaderia-app-showcase-v1.png'],
-      sortOrder: 6,
+      sortOrder: 7,
     },
     {
       slug: 'portafolio-full-stack',
@@ -261,7 +261,9 @@ async function main(): Promise<void> {
         'Railway',
       ],
       repositoryUrl: 'https://github.com/edwguro/HV.EGR',
-      sortOrder: 7,
+      demoUrl: 'https://hv-egr.up.railway.app/',
+      screenshots: ['/images/projects/hv-egr-showcase.png'],
+      sortOrder: 3,
     },
   ] as const;
 

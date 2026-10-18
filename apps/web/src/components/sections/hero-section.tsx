@@ -115,6 +115,12 @@ export function HeroSection({ profile }: { profile: ProfileResponse | null }) {
               <p className="text-accent mt-1 text-sm font-medium">
                 <BilingualText en={siteContent.roleEn} es={siteContent.role} />
               </p>
+              <p className="text-muted-foreground mt-2 text-xs">
+                <BilingualText
+                  en={siteContent.credentialEn}
+                  es={siteContent.credential}
+                />
+              </p>
             </div>
           </div>
         </div>

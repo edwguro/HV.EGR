@@ -2,6 +2,8 @@ export const siteContent = {
   name: 'Edwin Gustavo Rodríguez',
   role: 'Desarrollador de software · Backend, APIs y aplicaciones web',
   roleEn: 'Software Developer · Backend, APIs and web applications',
+  credential: 'Tarjeta profesional No. 091122-0807632 CNDC COPNIA',
+  credentialEn: 'Professional card No. 091122-0807632 CNDC COPNIA',
   specialty: 'Aplicaciones web, APIs y redes',
   specialtyEn: 'Web applications, APIs and networks',
   summary:

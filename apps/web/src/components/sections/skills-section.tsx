@@ -23,12 +23,11 @@ const descriptions: Record<SkillGroupResponse['category'], string> = {
   NETWORKING: 'Conectividad e infraestructura.',
 };
 
-const deviconBase = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons';
+const deviconBase = '/icons/devicon';
 
 const skillLogos: Record<string, { className?: string; src: string }> = {
   CSS3: { src: `${deviconBase}/css3/css3-original.svg` },
   Docker: { src: `${deviconBase}/docker/docker-original.svg` },
-  EJS: { className: 'dark:invert', src: `${deviconBase}/ejs/ejs-original.svg` },
   ESLint: { src: `${deviconBase}/eslint/eslint-original.svg` },
   Express: {
     className: 'dark:invert',
@@ -51,7 +50,6 @@ const skillLogos: Record<string, { className?: string; src: string }> = {
   },
   'Node.js': { src: `${deviconBase}/nodejs/nodejs-original.svg` },
   PostgreSQL: { src: `${deviconBase}/postgresql/postgresql-original.svg` },
-  Prettier: { src: `${deviconBase}/prettier/prettier-original.svg` },
   React: { src: `${deviconBase}/react/react-original.svg` },
   Jest: { src: `${deviconBase}/jest/jest-plain.svg` },
   'OpenAPI / Swagger': { src: `${deviconBase}/swagger/swagger-original.svg` },

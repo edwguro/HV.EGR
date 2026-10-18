@@ -1,6 +1,6 @@
 import { Braces } from 'lucide-react';
 
-const deviconBase = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons';
+const deviconBase = '/icons/devicon';
 
 const technologyLogos: Record<string, { className?: string; src: string }> = {
   'C#': { src: `${deviconBase}/csharp/csharp-original.svg` },
@@ -19,7 +19,6 @@ const technologyLogos: Record<string, { className?: string; src: string }> = {
   HTML: { src: `${deviconBase}/html5/html5-original.svg` },
   HTML5: { src: `${deviconBase}/html5/html5-original.svg` },
   JavaScript: { src: `${deviconBase}/javascript/javascript-original.svg` },
-  'LoopBack 4': { src: `${deviconBase}/loopback/loopback-original.svg` },
   MongoDB: { src: `${deviconBase}/mongodb/mongodb-original.svg` },
   MySQL: { src: `${deviconBase}/mysql/mysql-original.svg` },
   NestJS: { src: `${deviconBase}/nestjs/nestjs-original.svg` },
@@ -39,11 +38,7 @@ const technologyLogos: Record<string, { className?: string; src: string }> = {
   React: { src: `${deviconBase}/react/react-original.svg` },
   Railway: {
     className: 'dark:invert',
-    src: 'https://cdn.simpleicons.org/railway',
-  },
-  EJS: {
-    className: 'dark:invert',
-    src: `${deviconBase}/ejs/ejs-original.svg`,
+    src: '/icons/simple/railway.svg',
   },
   TypeScript: { src: `${deviconBase}/typescript/typescript-original.svg` },
 };

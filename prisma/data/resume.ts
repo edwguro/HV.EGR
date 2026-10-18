@@ -102,8 +102,7 @@ export const resumeData = {
       institution: 'CUN',
       degree: 'Ingeniero de Sistemas',
       field: 'Informática',
-      description:
-        'Ingeniero de Sistemas · Tarjeta profesional No. 091122-0807632 CNDC COPNIA.',
+      description: 'Ingeniero de Sistemas · Tarjeta profesional COPNIA.',
       startDate: '2019-04-01',
       endDate: '2024-10-01',
       certificateUrl: '/documents/diploma-ingeniero-sistemas-cun.pdf',
@@ -118,15 +117,6 @@ export const resumeData = {
       startDate: '2024-04-01',
       endDate: '2024-11-12',
       certificateUrl: '/documents/diplomado-java-poo-cun.pdf',
-    },
-    {
-      institution: 'EDUTIN ACADEMY',
-      degree: 'Certificación en Node.js',
-      field: 'Desarrollo de software',
-      description:
-        'Formación en fundamentos de Node.js, diseño y construcción de soluciones web, análisis y modelado de datos, arquitectura MVC y levantamiento de requisitos.',
-      startDate: '2023-01-15',
-      endDate: '2023-10-01',
     },
     {
       institution: 'CUN',
@@ -149,15 +139,6 @@ export const resumeData = {
       startDate: '2021-05-03',
       endDate: '2021-12-18',
       certificateUrl: '/documents/acta-ucaldas-desarrollo-software.pdf',
-    },
-    {
-      institution: 'CUN',
-      degree: 'Técnico Profesional en Soporte e Informática',
-      field: 'Facultad de Ingeniería',
-      description:
-        'Formación técnica profesional en soporte, informática y fundamentos de infraestructura tecnológica.',
-      startDate: '2019-04-01',
-      endDate: '2023-06-01',
     },
   ] as ResumeEducation[],
 } as const;

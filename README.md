@@ -271,6 +271,10 @@ corepack pnpm db:seed
 
 La guía `docs/COMO-CARGAR-HV.md` documenta estructura, fechas y certificados. Los archivos públicos se almacenan en `apps/web/public`, mientras que las credenciales permanecen fuera del repositorio.
 
+## Íconos de tecnologías
+
+Los íconos de las insignias se sirven desde `apps/web/public/icons`, sin depender de una CDN externa. Para regenerarlos o añadir uno nuevo, agrega su ruta en `tools/download-tech-icons.mjs`, ejecuta `corepack pnpm icons:download` y sube los SVG resultantes al repositorio.
+
 ## Configuración
 
 | Variable                                 | Uso                                                      |

@@ -36,7 +36,7 @@ function parseOptionalDate(value?: string): Date | null {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) {
     throw new Error(
-      `Fecha invÃ¡lida en resume.ts: "${value}". Usa el formato AAAA-MM-DD o "Actualmente".`,
+      `Fecha inválida en resume.ts: "${value}". Usa el formato AAAA-MM-DD o "Actualmente".`,
     );
   }
 
@@ -242,6 +242,26 @@ async function main(): Promise<void> {
       repositoryUrl: 'https://github.com/edwguro/EquipoColaborativo4',
       screenshots: ['/images/projects/ganaderia-app-showcase-v1.png'],
       sortOrder: 6,
+    },
+    {
+      slug: 'portafolio-full-stack',
+      title: 'Portafolio full-stack',
+      summary:
+        'Hoja de vida digital construida como producto: interfaz accesible, API REST versionada, PostgreSQL, documentación OpenAPI, pruebas automatizadas y despliegue con contenedores.',
+      description:
+        'Monolito modular en un monorepo con Next.js en el frontend y NestJS en el backend, contratos TypeScript compartidos, persistencia con Prisma y PostgreSQL, integraciones con GitHub, OpenAI y correo ejecutadas solo en el servidor, y un asistente que responde únicamente con información publicada. Incluye pruebas unitarias y E2E, integración continua con GitHub Actions, Docker multi-stage y despliegue en Railway.',
+      category: 'Portafolio full-stack',
+      technologies: [
+        'TypeScript',
+        'Next.js',
+        'NestJS',
+        'PostgreSQL',
+        'Prisma',
+        'Docker',
+        'Railway',
+      ],
+      repositoryUrl: 'https://github.com/edwguro/HV.EGR',
+      sortOrder: 7,
     },
   ] as const;
 

@@ -7,6 +7,7 @@
   },
   "scripts": {
     "build": "turbo run build",
+    "icons:download": "node tools/download-tech-icons.mjs",
     "db:generate": "prisma generate",
     "db:ganaderia-media-sync": "tsx prisma/sync-ganaderia-media.ts",
     "db:fortaleza-media-sync": "tsx prisma/sync-fortaleza-media.ts",

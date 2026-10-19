@@ -105,6 +105,7 @@ export function ProjectsSection({
                         'fortaleza-app',
                         'ganaderia-app',
                         'pautas-ji',
+                        'portafolio-full-stack',
                         'taxi-ji',
                         'territorio-360',
                       ].includes(project.slug)
@@ -122,6 +123,7 @@ export function ProjectsSection({
                             'fortaleza-app',
                             'edufree-api',
                             'pautas-ji',
+                            'portafolio-full-stack',
                             'taxi-ji',
                             'ganaderia-app',
                             'territorio-360',

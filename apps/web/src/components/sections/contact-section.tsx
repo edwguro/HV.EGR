@@ -50,7 +50,7 @@ export function ContactSection() {
             {siteContent.github.label}
           </a>
         </div>
-        <div className="mt-4 grid items-stretch gap-3 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)]">
+        <div className="mt-4 grid grid-cols-1 items-stretch gap-3 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)]">
           <ContactForm />
           <ProfessionalAssistant />
         </div>

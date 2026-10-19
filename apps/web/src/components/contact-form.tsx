@@ -34,7 +34,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className="border-border bg-surface h-full rounded-xl border p-4 shadow-[0_12px_30px_-24px_rgb(15_23_42_/_0.45)] sm:p-5">
+    <div className="border-border bg-surface h-full min-w-0 rounded-xl border p-4 shadow-[0_12px_30px_-24px_rgb(15_23_42_/_0.45)] sm:p-5">
       <div className="mb-4 flex items-center gap-3">
         <span className="bg-accent/10 text-accent flex size-9 items-center justify-center rounded-lg">
           <Mail aria-hidden size={17} />
@@ -47,10 +47,10 @@ export function ContactForm() {
         </div>
       </div>
       <form
-        className="grid gap-3"
+        className="grid grid-cols-1 gap-3"
         onSubmit={(event) => void handleSubmit(event)}
       >
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           <label className="text-xs font-semibold">
             Nombre
             <input
@@ -72,7 +72,7 @@ export function ContactForm() {
             />
           </label>
         </div>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           <label className="text-xs font-semibold">
             Empresa{' '}
             <span className="text-muted-foreground font-normal">

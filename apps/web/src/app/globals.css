@@ -12,6 +12,10 @@
   --accent: #087c7c;
   --surface: #ffffff;
   --surface-elevated: #ffffff;
+  --header-start: #dbe7f3;
+  --header-middle: #cee2e9;
+  --header-end: #d3dfef;
+  --header-border: #9ab7cd;
   color-scheme: light;
 }
 
@@ -24,6 +28,10 @@
   --accent: #72cfc5;
   --surface: #1a2530;
   --surface-elevated: #22303c;
+  --header-start: #0b1626;
+  --header-middle: #112d3c;
+  --header-end: #14213a;
+  --header-border: #2c4a60;
   color-scheme: dark;
 }
 
@@ -136,6 +144,60 @@ button,
 
 .skip-link:focus {
   top: 1rem;
+}
+
+.site-header,
+.site-header-menu {
+  border-color: var(--header-border);
+  background: linear-gradient(
+    110deg,
+    var(--header-start),
+    var(--header-middle) 55%,
+    var(--header-end)
+  );
+}
+
+/* Each ribbon uses the profile's content width and an integer number of cards. */
+.card-ribbon {
+  container-type: inline-size;
+  min-width: 0;
+  width: 100%;
+}
+
+.card-ribbon-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--accent) var(--muted);
+  scrollbar-width: thin;
+  padding-block: 0.25rem 0.75rem;
+}
+
+.card-ribbon-track > * {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+@container (min-width: 40rem) {
+  .card-ribbon-track {
+    grid-auto-columns: calc((100% - 1rem) / 2);
+  }
+}
+
+@container (min-width: 64rem) {
+  .card-ribbon-track {
+    grid-auto-columns: calc((100% - 2rem) / 3);
+  }
+}
+
+@container (min-width: 80rem) {
+  .card-ribbon-track {
+    grid-auto-columns: calc((100% - 3rem) / 4);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -38,7 +38,7 @@ export function ProfessionalAssistant() {
   }
 
   return (
-    <div className="border-border bg-surface flex h-full flex-col rounded-xl border p-4 shadow-[0_12px_30px_-24px_rgb(15_23_42_/_0.45)] sm:p-5">
+    <div className="border-border bg-surface flex h-full min-w-0 flex-col rounded-xl border p-4 shadow-[0_12px_30px_-24px_rgb(15_23_42_/_0.45)] sm:p-5">
       <div className="flex items-center gap-3">
         <span className="flex size-9 items-center justify-center rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400">
           <MessageCircle aria-hidden size={17} />

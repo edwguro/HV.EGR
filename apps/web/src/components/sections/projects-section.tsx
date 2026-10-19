@@ -95,44 +95,16 @@ export function ProjectsSection({
             >
               {filteredProjects.map((project) => (
                 <article
-                  className="group border-border bg-surface hover:border-accent/35 flex w-[min(82vw,18.5rem)] shrink-0 snap-start flex-col overflow-hidden rounded-lg border shadow-[0_8px_22px_-20px_rgb(15_23_42_/_0.42)] transition duration-300 hover:-translate-y-0.5"
+                  className="group border-border bg-surface hover:border-accent/35 flex min-w-0 flex-col overflow-hidden rounded-lg border shadow-[0_8px_22px_-20px_rgb(15_23_42_/_0.42)] transition duration-300 hover:-translate-y-0.5"
                   key={project.slug}
                 >
-                  <div
-                    className={`border-border bg-muted relative overflow-hidden border-b ${
-                      [
-                        'edufree-api',
-                        'fortaleza-app',
-                        'ganaderia-app',
-                        'pautas-ji',
-                        'portafolio-full-stack',
-                        'taxi-ji',
-                        'territorio-360',
-                      ].includes(project.slug)
-                        ? project.slug === 'pautas-ji'
-                          ? 'aspect-video'
-                          : 'aspect-[3/2]'
-                        : 'h-20'
-                    }`}
-                  >
+                  <div className="project-cover border-border bg-muted relative aspect-[3/2] overflow-hidden border-b">
                     {project.coverImageUrl ? (
                       <Image
                         alt={`Interfaz de ${project.title}`}
-                        className={`${
-                          [
-                            'fortaleza-app',
-                            'edufree-api',
-                            'pautas-ji',
-                            'portafolio-full-stack',
-                            'taxi-ji',
-                            'ganaderia-app',
-                            'territorio-360',
-                          ].includes(project.slug)
-                            ? 'object-contain'
-                            : 'object-cover'
-                        } object-center transition-transform duration-500 group-hover:scale-[1.025]`}
+                        className="object-contain object-center"
                         fill
-                        sizes="296px"
+                        sizes="(max-width: 679px) 100vw, (max-width: 1087px) 50vw, (max-width: 1343px) 33vw, 336px"
                         src={project.coverImageUrl}
                       />
                     ) : (

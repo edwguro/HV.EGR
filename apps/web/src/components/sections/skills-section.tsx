@@ -109,7 +109,7 @@ export function SkillsSection({ groups }: { groups: SkillGroupResponse[] }) {
             >
               {groups.map((group) => (
                 <article
-                  className="border-border/80 bg-surface flex w-[min(78vw,17rem)] shrink-0 snap-start flex-col rounded-lg border border-l-2 px-3 py-2.5 shadow-sm"
+                  className="border-border/80 bg-surface flex min-w-0 flex-col rounded-lg border border-l-2 px-3 py-2.5 shadow-sm"
                   key={group.category}
                 >
                   <div className="border-border/70 min-h-12 border-b pb-2">

@@ -8,6 +8,7 @@ test('muestra los estudios en tarjetas compactas con detalle', async ({
   const education = page.locator('#educacion');
   const ribbon = education.getByLabel(
     'Formacion academica en cinta horizontal',
+    { exact: true },
   );
   await expect(ribbon).toBeVisible();
   await expect(education.getByRole('article')).toHaveCount(4);

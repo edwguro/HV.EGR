@@ -50,8 +50,8 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="site-header sticky top-0 z-50 border-b border-blue-200/80 bg-gradient-to-r from-white/96 via-cyan-50/92 to-blue-50/96 shadow-[0_8px_26px_-20px_rgb(8_47_73_/_0.7)] backdrop-blur-xl dark:border-cyan-300/15 dark:from-slate-950/96 dark:via-slate-900/94 dark:to-cyan-950/80 dark:shadow-[0_8px_28px_-20px_rgb(34_211_238_/_0.45)] print:hidden">
-      <div className="mx-auto flex min-h-16 max-w-[88rem] items-center justify-between gap-3 px-5 lg:px-8">
+    <header className="site-header sticky top-0 z-50 border-b shadow-[0_8px_26px_-20px_rgb(8_47_73_/_0.7)] dark:shadow-[0_8px_28px_-20px_rgb(34_211_238_/_0.45)] print:hidden">
+      <div className="mx-auto flex min-h-16 max-w-[88rem] flex-wrap items-center justify-between gap-x-3 gap-y-2 px-5 py-2 sm:flex-nowrap sm:py-0 lg:px-8">
         <Link
           aria-label="EGR, Software Developer"
           className="group flex flex-col items-start gap-0 rounded-lg focus-visible:ring-2 focus-visible:ring-cyan-500/40 focus-visible:outline-none"
@@ -73,7 +73,7 @@ export function SiteHeader() {
         </Link>
         <nav
           aria-label="Navegación principal"
-          className="hidden items-center gap-0.5 lg:flex"
+          className="hidden items-center gap-0.5 xl:flex"
         >
           {siteContent.navigation.map((item) => (
             <Link
@@ -114,7 +114,7 @@ export function SiteHeader() {
           <Button
             aria-expanded={menuOpen}
             aria-label="Abrir menú"
-            className="size-9 p-0 lg:hidden"
+            className="size-9 p-0 xl:hidden"
             onClick={() => setMenuOpen((open) => !open)}
             type="button"
             variant="ghost"
@@ -130,7 +130,7 @@ export function SiteHeader() {
       {menuOpen ? (
         <nav
           aria-label="Navegación móvil"
-          className="grid border-t border-blue-200/75 bg-gradient-to-br from-white via-cyan-50 to-blue-50 p-3 lg:hidden dark:border-cyan-300/15 dark:from-slate-950 dark:via-slate-900 dark:to-cyan-950"
+          className="site-header-menu grid border-t p-3 xl:hidden"
         >
           {siteContent.navigation.map((item) => (
             <Link

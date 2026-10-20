@@ -147,7 +147,7 @@ async function main(): Promise<void> {
         'PWA',
         'Railway',
       ],
-      repositoryUrl: null,
+      repositoryUrl: 'https://github.com/edwguro/pautas-ji',
       demoUrl: 'https://pautas-ji-web-production.up.railway.app/',
       screenshots: ['/images/projects/pautas-ji-dashboard.png'],
       sortOrder: 1,

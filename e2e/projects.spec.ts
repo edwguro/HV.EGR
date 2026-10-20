@@ -13,6 +13,13 @@ test('prioriza los proyectos en producción y enlaza PAUTAS JI', async ({
 
   const pautas = projects.filter({ hasText: 'PAUTAS JI' });
   await expect(pautas).toContainText('En producción');
+  const github = pautas.getByRole('link', { name: 'GitHub', exact: true });
+  await expect(github).toBeVisible();
+  await expect(github).toHaveAttribute(
+    'href',
+    'https://github.com/edwguro/pautas-ji',
+  );
+  await expect(github).toHaveAttribute('target', '_blank');
   await expect(pautas.getByRole('link', { name: 'Ver web' })).toHaveAttribute(
     'href',
     'https://pautas-ji-web-production.up.railway.app/',

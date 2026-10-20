@@ -20,6 +20,13 @@ No cambiar variables, reiniciar PostgreSQL ni borrar volúmenes para resolver un
 
 ## Actualizaciones de contenido en producción
 
+La migración `20261019000000_add_pautas_ji_repository` completa únicamente el
+enlace GitHub vacío del proyecto `pautas-ji`. Conserva enlaces modificados
+manualmente y todos los demás datos; no requiere ejecutar la semilla. El botón
+existente aparece en cuanto la API devuelve `repositoryUrl`. La visibilidad del
+repositorio en GitHub se administra por separado; este cambio no la modifica.
+Prueba aislada: `psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f prisma/tests/pautas-repository.sql`.
+
 El pre-despliegue de la API debe ejecutar únicamente `npx prisma migrate deploy`. No encadenar la semilla completa: `seed.ts` elimina y recrea experiencias, educación y habilidades, y no corresponde a una actualización puntual de una HV existente. La semilla queda reservada para inicializar una base nueva de forma explícita. En el despliegue anterior solo se observó la ejecución de migraciones; no asumir que un comando encadenado con `&&` ejecutó la sincronización.
 
 La migración `20261018000000_update_ejercito_experience` publica el cargo y la descripción aprobados en `resume.ts`. Filtra por perfil, empresa, fechas y texto anterior; conserva ID, certificados, orden, demás experiencias y educación. Si no existe el registro anterior, no crea ni elimina datos. En una base nueva la semilla ya contiene el texto actualizado.
